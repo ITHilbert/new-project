@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factory;
 use Illuminate\Support\Facades\Config;
 use Illuminate\View\Compilers\BladeCompiler;
 
-class UserAuthServiceProvider extends ServiceProvider
+class NewProjectServiceProvider extends ServiceProvider
 {
     /**
      * @var string $moduleName
