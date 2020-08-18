@@ -15,7 +15,7 @@
     "require": {},
     "require-dev": {},
     "scripts": {
-        "post-install-cmd": [
+        "post-package-install": [
             "@composer require laravel/ui",
             "@php artisan ui:controllers",
 
