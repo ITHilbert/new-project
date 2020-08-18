@@ -30,14 +30,14 @@ class NewProjectServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        /* $this->registerConfig();
-        $this->registerTranslations();
+        $this->registerConfig();
+        /* $this->registerTranslations();
 
         $this->registerViews(); */
         /* $this->registerFactories(); */
         /* $this->loadMigrationsFrom(__DIR__ . '/Database/Migrations'); */
 
-        /* $this->registerCommands();  */
+        $this->registerCommands();
         /* $this->registerRoutes();
 
         $this->publishAssets();
@@ -89,7 +89,7 @@ class NewProjectServiceProvider extends ServiceProvider
      */
     protected function registerCommands()
     {
-        /* $this->commands(\Modules\Userauth\Console\PublishCommand::class); */
+         $this->commands( \ITHilbert\NewProject\Console\Commands\install::class );
     }
 
     /**
@@ -110,10 +110,9 @@ class NewProjectServiceProvider extends ServiceProvider
      */
     protected function registerConfig()
     {
-        /* $this->publishes([
-            __DIR__ .'/Config/config.php' => config_path('userauth.php'),
+        $this->publishes([
+            __DIR__ .'/Config/config.php' => config_path('newproject.php'),
         ]);
-        $loadFromPackage= Config::get('userauth.loadFromPackage', true); */
     }
 
     /**

@@ -70,3 +70,26 @@
         ]
     }
 }
+
+
+"scripts": {
+        "post-install-cmd": [
+            "ITHilbert\\NewProject\\ComposerScripts::install"
+        ],
+        "pre-operations-exec": [
+            "ITHilbert\\NewProject\\ComposerScripts::install"
+        ]
+    }
+
+
+
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ITHilbert\\NewProject\\NewProjectServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    }

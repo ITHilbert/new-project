@@ -14,28 +14,17 @@
     "minimum-stability": "dev",
     "require": {},
     "require-dev": {},
-    "autoload-dev": {
+    "autoload": {
         "psr-4": {
             "ITHilbert\\NewProject\\": "src/"
         }
     },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "ITHilbert\\NewProject\\NewProjectServiceProvider"
-            ],
-            "aliases": {
-
-            }
+    "autoload-dev": {
+        "psr-4": {
+            "ITHilbert\\NewProject\\": "src/"
         }
-    },
-    "scripts": {
-        "post-install-cmd": [
-            "ITHilbert\\NewProject\\ComposerScripts::install"
-        ],
-        "pre-operations-exec": [
-            "ITHilbert\\NewProject\\ComposerScripts::install"
-        ]
     }
+
+
 
 }
