@@ -15,7 +15,8 @@
     "require": {},
     "require-dev": {},
     "scripts": {
-        "post-package-install": [
+        "post-install-cmd": [
+            "echo post-install-cmd",
             "@composer require laravel/ui",
             "@php artisan ui:controllers",
 
@@ -28,6 +29,44 @@
 
             "@composer require jeroennoten/laravel-adminlte",
             "@php artisan adminlte:install"
+        ],
+        "post-package-install": [
+            "echo post-package-install",
+            "@composer require laravel/ui",
+            "@php artisan ui:controllers",
+
+            "@composer require orangehill/iseed",
+
+            "@composer require yajra/laravel-datatables-oracle",
+
+            "@composer require barryvdh/laravel-debugbar --dev",
+            "@php artisan vendor:publish --provider=\"Barryvdh\\Debugbar\\ServiceProvider\"",
+
+            "@composer require jeroennoten/laravel-adminlte",
+            "@php artisan adminlte:install"
+        ],
+        "pre-operations-exec": [
+            "echo pre-operations-exec",
+            "@composer require laravel/ui",
+            "@php artisan ui:controllers",
+
+            "@composer require orangehill/iseed",
+
+            "@composer require yajra/laravel-datatables-oracle",
+
+            "@composer require barryvdh/laravel-debugbar --dev",
+            "@php artisan vendor:publish --provider=\"Barryvdh\\Debugbar\\ServiceProvider\"",
+
+            "@composer require jeroennoten/laravel-adminlte",
+            "@php artisan adminlte:install"
+        ],
+        "pre-package-uninstall": [
+            "echo pre-package-uninstall",
+            "@composer remove laravel/ui",
+            "@composer remove orangehill/iseed",
+            "@composer remove yajra/laravel-datatables-oracle",
+            "@composer remove barryvdh/laravel-debugbar --dev",
+            "@composer remove jeroennoten/laravel-adminlte"
         ]
     }
 }
